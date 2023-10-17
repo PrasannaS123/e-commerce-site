@@ -1,0 +1,56 @@
+.login-sec {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.login-images {
+    padding: 0pc !important;
+}
+.login-images img{
+    height: 100%;
+}
+
+.login-process {
+    background-color: #ece4d1;
+}
+
+.login-content h2 {
+    font-size: 35px;
+    font-weight: 600;
+    color: cornflowerblue;
+
+}
+
+::placeholder {
+    color: gray !important;
+    font-size: 14px !important;
+}
+
+input {
+    box-shadow: none !important;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red !important;
+}
+
+.error-text {
+    color: red !important;
+    display: table !important;
+    font-size: 12px !important;
+   
+}
+
+.card .input-container {
+    position: relative;
+}
+
+.visibleButton {
+    position: absolute;
+    top: 54%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+}

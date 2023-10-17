@@ -1,0 +1,46 @@
+.card {
+    height: 100% !important;
+}
+
+.card-img-top {
+    height: 300px;
+    width: 100%;
+    padding: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.card-title {
+    color: cornflowerblue;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list-group{
+    cursor: pointer;
+    border-radius: 0px !important;
+}
+.list-group-item:hover{
+background-color: cornflowerblue !important;
+color: white !important;
+}
+.list-group-item {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.23);
+}

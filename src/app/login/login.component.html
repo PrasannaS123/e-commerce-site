@@ -1,0 +1,78 @@
+<section class="login-sec ">
+    <div class="container ">
+        <div class="row" style="margin-top: 10px; ">
+            <div class="col-lg-6 col-md-12 col-12 login-images">
+                <img src="https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 login-process d-flex align-items-center justify-content-center ">
+                <div class="login-content p-5   ">
+                    <h2 class="mb-4">Welcome to The Walmart <br> E-commerce</h2>
+                    <form action="#" [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+                        <div class="input-group  ">
+                            <span class="input-group-text">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control px-2 py-3 "   formControlName="email"
+                                placeholder="Username or Email">
+                        </div>
+                        <span class="error-text"
+                            *ngIf="LoginForm.get('email')?.hasError('required') && LoginForm.get('email')?.touched">
+                            Email is required.
+                        </span>
+                        <span class="error-text"
+                            *ngIf="LoginForm.get('email')?.hasError('email') && LoginForm.get('email')?.touched">
+                            Please enter a valid email address.
+                        </span>
+
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" class="form-control px-2 py-3" 
+                                formControlName="password" placeholder="Password">
+                          
+                        </div>
+                        <span class="error-text"
+                            *ngIf="LoginForm.get('password')?.hasError('required') && LoginForm.get('password')?.touched">
+                            Password is required.
+                        </span>
+                        <span class="error-text"
+                            *ngIf="LoginForm.get('password')?.hasError('minlength') && LoginForm.get('password')?.touched">
+                            Password must be at least 8 characters long.
+                        </span>
+                        <span class="error-text text-wrap" style="width: 25rem;"
+                            *ngIf="LoginForm.get('password')?.hasError('pattern') && LoginForm.get('password')?.touched">
+                            Password must contain at least one lowercase letter, one uppercase letter, one digit, and
+                            one
+                            special character.
+                        </span>
+
+                        <div class="d-flex mt-3 ">
+                            <div class="checkboxDiv flex-grow-1">
+                                <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                <label class="form-check-label ms-2" for="exampleCheckbox" style="font-size: 14px;">
+                                    Remember Me
+                                </label>
+                            </div>
+                            <div class="ForgotPass  ">
+                                <a href="#" target="_blank" class="text-decoration-none text-dark"
+                                    style="font-size: 14px;">
+                                    Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="register-first text-center my-3 ">
+                            <span style="font-size: 14px;">New User? Please <a routerLink="/register"
+                                    class="text-decoration-none">Register</a></span>
+                        </div>
+                        <div class="text-center mt-2 ">
+                            <button class="btn btn-primary">
+                                Login <i class="fa-solid fa-right-to-bracket"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

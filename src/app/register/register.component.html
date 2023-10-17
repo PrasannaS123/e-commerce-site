@@ -1,0 +1,124 @@
+<section class="register-sec">
+    <div class="container">
+        <div class="card my-4 ">
+            <div class="card-body">
+                <div class="register-sec-header">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <img src="https://static.vecteezy.com/system/resources/previews/013/787/416/original/online-shopping-icon-ecommerce-icon-or-logo-isolated-sign-symbol-illustration-free-vector.jpg"
+                                style="width: 70px;">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5>Walmart E-commerce Registration</h5>
+                            An e-commerce registration form is used by e-commerce businesses to
+                            register their goods or services that are available
+                            for sale.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card p-3 mb-4">
+            <span style="line-height: 100%; font-size: 14px;">Personal Information</span>
+            <form action="#" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <label for="email" class="form-label fw-semibold required">1. Email</label>
+                    <input type="email" class="form-control" formControlName="email" id="email" name="email">
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('email')?.hasError('required') && RegisterForm.get('email')?.touched">
+                        Email is required.
+                    </span>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('email')?.hasError('email') && RegisterForm.get('email')?.touched">
+                        Please enter a valid email address.
+                    </span>
+
+                </div>
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <label for="username" class="form-label fw-semibold required">2. Username</label>
+                    <input type="text" class="form-control" formControlName="username" id="username" name="username">
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('username')?.hasError('required') && RegisterForm.get('username')?.touched">
+                        Username is required.
+                    </span>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('username')?.hasError('minlength') && RegisterForm.get('username')?.touched">
+                        Username must be at least 5 characters long.
+                    </span>
+                </div>
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <div class="input-container">
+                        <label for="password" class="form-label fw-semibold required">3. Password</label>
+                        <input type="{{ passwordVisible ? 'password' : 'text' }}" class="form-control"
+                            formControlName="password" id="password" name="password">
+                        <button type="button" class="visibleButton" (click)="togglePasswordVisibility()">
+                            <i class="fa-regular" [ngClass]="{'fa-eye-slash': passwordVisible, 'fa-eye': !passwordVisible}"></i>
+                        </button>
+                    </div>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('password')?.hasError('required') && RegisterForm.get('password')?.touched">
+                        Password is required.
+                    </span>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('password')?.hasError('minlength') && RegisterForm.get('password')?.touched">
+                        Password must be at least 8 characters long.
+                    </span>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('password')?.hasError('pattern') && RegisterForm.get('password')?.touched">
+                        Password must contain at least one lowercase letter, one uppercase letter, one digit, and one
+                        special character.
+                    </span>
+                </div>
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <label for="number" class="form-label fw-semibold required">4.Phone Number</label>
+                    <input type="number" class="form-control" formControlName="phoneNumber" id="name" name="name">
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('phoneNumber')?.hasError('required') && RegisterForm.get('phoneNumber')?.touched">
+                        Phone Number is required.
+                    </span>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('phoneNumber')?.hasError('pattern') && RegisterForm.get('phoneNumber')?.touched">
+                        Please enter a valid 10-digit phone number.
+                    </span>
+                </div>
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <label for="address" class="form-label fw-semibold required">5. Address</label>
+                    <input type="text" class="form-control" formControlName="address" id="address" name="address">
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('address')?.hasError('required') && RegisterForm.get('address')?.touched">
+                        Address is required.
+                    </span>
+                </div>
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <label for="state" class="form-label fw-semibold required">6. State</label>
+                    <input type="text" class="form-control" formControlName="state" id="state" name="state">
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('state')?.hasError('required') && RegisterForm.get('state')?.touched">
+                        State is required.
+                    </span>
+                </div>
+                <div class="card mt-2 mb-3 py-4 px-3">
+                    <label for="state" class="form-label fw-semibold required">7. Pin</label>
+                    <input type="number" class="form-control" formControlName="zip" id="zip" name="zip">
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('zip')?.hasError('required') && RegisterForm.get('zip')?.touched">
+                        Pin is required.
+                    </span>
+                    <span class="error-text"
+                        *ngIf="RegisterForm.get('zip')?.hasError('pattern') && RegisterForm.get('zip')?.touched">
+                        Please enter a 6-digit Pin code.
+                    </span>
+                </div>
+                <div class="d-flex">
+                    <div class="register-already flex-grow-1 d-flex align-items-center">
+                        <span style="font-size: 14px;">Already have a Account? Please <a routerLink="/login"
+                                class="text-decoration-none">Login</a></span>
+                    </div>
+                    <div class="register-buitton">
+                        <button class="btn btn-primary p-2"  routerLink="/products">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

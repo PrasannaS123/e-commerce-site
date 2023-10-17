@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header">
+            <h1> {{productDetail.title}} </h1>
+        </div>
+        <div class="card-body">
+            <div>
+                <img [src]="productDetail.image" alt="{{productDetail.title}}" class="img-fluid w-25 ">
+            </div>
+            <h5 class="card-title my-2">{{productDetail.category}}</h5>
+            <p class="card-text">{{productDetail.description}}</p>
+            <p><span class="fw-semibold">Rating:</span> {{productDetail.rating.rate}},<span
+                    class="fw-semibold">Count:</span> {{productDetail.rating.count}}</p>
+            <div class="float-end">
+                <button class="btn btn-success" (click)="addtocart(productDetail)">Add to Cart</button> &nbsp;
+                <button class="btn btn-secondary" routerLink="/products">Explore More</button>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>

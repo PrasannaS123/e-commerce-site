@@ -1,0 +1,8 @@
+.card{
+    height: 100%;
+}
+.card-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: darkorange;
+}

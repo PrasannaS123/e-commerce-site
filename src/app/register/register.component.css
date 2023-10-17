@@ -1,0 +1,39 @@
+ .register-sec-header {
+     display: flex;
+     align-items: center;
+ }
+
+ .required::after {
+     content: ' *';
+     color: red;
+     position: absolute;
+     right: 20px;
+ }
+
+ input {
+     box-shadow: none !important;
+ }
+
+ input.ng-invalid.ng-touched {
+     border: 1px solid red !important;
+ }
+
+ .error-text {
+     color: red !important;
+     display: block !important;
+     font-size: 12px !important;
+ }
+
+ .card .input-container {
+     position: relative;
+ }
+
+ .visibleButton {
+     position: absolute;
+     top: 74%;
+     right: 10px;
+     transform: translateY(-50%);
+     cursor: pointer;
+     background: none;
+     border: none;
+ }

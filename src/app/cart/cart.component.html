@@ -1,0 +1,82 @@
+<ng-container *ngIf="TableShow.length != 0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="table-responsive my-3">
+                <table class="table  text-center">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Category</th>
+
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Count</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let items of TableShow; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{items.title}}</td>
+                            <td>
+                                <img [src]="items.image" class="img-fluid w-25" alt="{{items.title}}">
+                            </td>
+                            <td>{{items.description}}</td>
+                            <td>{{items.category}}</td>
+
+                            <td>{{items.rating.rate}}</td>
+                            <td>${{items.price}}</td>
+                            <td>{{items.rating.count}}</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="removeItem(items)">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="4"></td>
+                            <td colspan="2"> <button class="btn btn-danger" (click)="removeItemsAll()">Delete
+                                    All</button></td>
+                            <td colspan="1">All Total: ${{getTotalPrice}}</td>
+
+                            <td colspan="2"> <button class="btn btn-primary" routerLink="/products">Shop More</button>
+                            </td>
+
+
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+
+
+
+<ng-container *ngIf="TableShow.length == 0">
+    <div class=" container my-5">
+        <div class="card">
+            <div class="card-header">
+                My Cart
+            </div>
+            <div class="card-body text-center">
+                <img src="https://img.freepik.com/premium-vector/shopping-cart-with-cross-mark-wireless-paymant-icon-shopping-bag-failure-paymant-sign-online-shopping-vector_662353-912.jpg"
+                    alt="img-cart" class="img-fluid w-25">
+                <h4 class="card-title">Your Cart is Empty!</h4>
+                <p class="card-text">Add item to it now</p>
+                <a class="btn btn-primary" routerLink="/products">Shop now</a>
+            </div>
+        </div>
+    </div>
+</ng-container>
