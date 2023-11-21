@@ -3,19 +3,16 @@ import { ProductsService } from '../services/products.service';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../services/cart.service';
 
-
-
 @Component({
-  selector: 'app-products-details',
-  templateUrl: './products-details.component.html',
-  styleUrls: ['./products-details.component.css']
+  selector: 'app-products-details-e',
+  templateUrl: './products-details-e.component.html',
+  styleUrls: ['./products-details-e.component.css']
 })
-export class ProductsDetailsComponent implements OnInit {
-
+export class ProductsDetailsEComponent implements OnInit {
 
   productDetail: any = [];
-  constructor(private productsService: ProductsService, private route: ActivatedRoute ,private cartService: CartService) {
-     
+  constructor(private productsService: ProductsService, private route: ActivatedRoute, private cartService: CartService) {
+
   }
   ngOnInit(): void {
     let productid = this.route.snapshot.paramMap.get('productid');
@@ -25,15 +22,9 @@ export class ProductsDetailsComponent implements OnInit {
       console.log(dummy);
     })
   }
-  
+
   addtocart(name: any) {
     this.cartService.addToCart(name);
   }
-  
-
-
-
-
 
 }
-

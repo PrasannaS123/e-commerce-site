@@ -4,11 +4,12 @@ import { CartService } from '../services/cart.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: 'app-products-e',
+  templateUrl: './products-e.component.html',
+  styleUrls: ['./products-e.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsEComponent implements OnInit {
+
   productsList: any[] = [];
 
   searchKey: string = '';
@@ -29,7 +30,7 @@ export class ProductsComponent implements OnInit {
         if (dummy.category == "men's clothing" || dummy.category == "women's clothing") {
           dummy.category = "fashion";
         }
-       
+
 
         Object.assign(dummy, { TotalPrice: dummy.price })
       });
@@ -40,8 +41,8 @@ export class ProductsComponent implements OnInit {
   addtocart(name: any) {
     this.cartService.addToCart(name);
   }
- 
-  
+
+
   OnNavigate() {
     this.router.navigate(['/productDetails']);
 
@@ -58,10 +59,9 @@ export class ProductsComponent implements OnInit {
         if (dummy.category === category || category == "") {
           return dummy;
         }
-      
-    }) 
-    
-  }
 
+      })
+
+  }
 
 }

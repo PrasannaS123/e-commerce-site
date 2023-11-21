@@ -3,18 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-login-e',
+  templateUrl: './login-e.component.html',
+  styleUrls: ['./login-e.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginEComponent implements OnInit {
 
   LoginForm!: FormGroup;
-  
+
 
   constructor(private http: HttpClient) { }
 
- 
+
 
 
   ngOnInit(): void {
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
       alert('Please fill in all required fields correctly.');
     }
-   
+
   }
-  
+
 }

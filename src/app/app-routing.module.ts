@@ -1,26 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartComponent } from './cart/cart.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductsDetailsComponent } from './products-details/products-details.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { CartEComponent } from './cart-e/cart-e.component';
+import { LoginEComponent } from './login-e/login-e.component';
+import { ProductsDetailsEComponent } from './products-details-e/products-details-e.component';
+import { RegisterEComponent } from './register-e/register-e.component';
+import { ProductsEComponent } from './products-e/products-e.component';
+
 
 
 
 const routes: Routes = [
-  { path: '', component: LoginComponent},
-  {path: "**", component: LoginComponent},
-  { path: 'products', component: ProductsComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'productDetails/:productid', component: ProductsDetailsComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent}
-
-
-
-
-
+  { path: '', component: LoginEComponent },
+  { path: 'products', component: ProductsEComponent },
+  { path: 'cart', component: CartEComponent },
+  { path: 'productDetails/:productid', component: ProductsDetailsEComponent },
+  { path: 'register', component: RegisterEComponent },
+  { path: 'login', component: LoginEComponent }
 ];
 
 @NgModule({

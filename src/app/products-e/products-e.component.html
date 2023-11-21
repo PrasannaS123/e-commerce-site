@@ -1,7 +1,5 @@
+<div class="mb-3 bg" style="background-color: transparent;">
 
-
-<div class="mb-3 bg"style="background-color: transparent;">
-  
     <ul class="list-group list-group-horizontal position-relative text-center mb-3 mt-2 ">
         <li class="list-group-item w-100" (click)="filter('')">
             <span> All Products</span>
@@ -9,13 +7,13 @@
         <li class="list-group-item w-100" (click)="filter('electronics')">
             <span> Electronics</span>
         </li>
-        <li class="list-group-item w-100"  (click)="filter('fashion')">
+        <li class="list-group-item w-100" (click)="filter('fashion')">
             <span> Fashion</span>
         </li>
         <li class="list-group-item w-100" (click)="filter('jewelery')">
             <span> Jewels</span>
         </li>
-        
+
     </ul>
 </div>
 
@@ -27,21 +25,23 @@
         </div>
         <div class="col-lg-3 col-md-6 my-3" *ngFor="let name of filterCategory | search:searchKey: 'title' ">
 
-            <div class="card" >
-                <img [src]="name.image" routerLink="/productDetails/{{name.id}}" class="card-img-top img-fluid" [alt]="name.title">
+            <div class="card">
+                <img [src]="name.image" routerLink="/productDetails/{{name.id}}" class="card-img-top img-fluid"
+                    [alt]="name.title">
                 <div class="card-body">
 
-                    <h5 class="card-title" routerLink="/productDetails" >{{name.title}}</h5>
+                    <h5 class="card-title" routerLink="/productDetails">{{name.title}}</h5>
                     <p class="text-success fw-semibold">Rs.${{name.price}}</p>
-                    <p class="card-text" >{{name.description}}</p>
+                    <p class="card-text">{{name.description}}</p>
                     <p class="card-text" [ngStyle]="{color: 'crimson' }">Category: {{name.category}}</p>
                     <div class="d-flex justify-content-between">
                         <p>Rating: {{name.rating.rate}}</p>
                         <p>Count: {{name.rating.count}}</p>
                     </div>
-                    <button class="btn btn-success" routerLink="/productDetails/{{name.id}}" >Show Product</button> &nbsp;
+                    <button class="btn btn-success" routerLink="/productDetails/{{name.id}}">Show Product</button>
+                    &nbsp;
                     <button class="btn btn-success" (click)="addtocart(name)">Add to Cart</button>
-                    
+
                 </div>
             </div>
 

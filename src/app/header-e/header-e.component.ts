@@ -1,15 +1,12 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { CartService } from '../services/cart.service';
-import { style, transition, trigger,animate , state} from '@angular/animations';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
- 
+  selector: 'app-header-e',
+  templateUrl: './header-e.component.html',
+  styleUrls: ['./header-e.component.css']
 })
-export class HeaderComponent {
-
+export class HeaderEComponent {
   public totalcartToAdded: number = 0;
   public searchItem: any = "";
 
@@ -21,9 +18,10 @@ export class HeaderComponent {
   }
 
 
-  search(event: any) { 
+  search(event: any) {
     this.searchItem = (event.target as HTMLInputElement).value;
-    
+
     this.cartService.search.next(this.searchItem)
   }
+
 }

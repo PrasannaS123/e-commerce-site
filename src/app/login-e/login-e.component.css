@@ -6,7 +6,8 @@
 .login-images {
     padding: 0pc !important;
 }
-.login-images img{
+
+.login-images img {
     height: 100%;
 }
 
@@ -38,7 +39,7 @@ input.ng-invalid.ng-touched {
     color: red !important;
     display: table !important;
     font-size: 12px !important;
-   
+
 }
 
 .card .input-container {

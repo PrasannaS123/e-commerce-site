@@ -52,7 +52,8 @@
                         <input type="{{ passwordVisible ? 'password' : 'text' }}" class="form-control"
                             formControlName="password" id="password" name="password">
                         <button type="button" class="visibleButton" (click)="togglePasswordVisibility()">
-                            <i class="fa-regular" [ngClass]="{'fa-eye-slash': passwordVisible, 'fa-eye': !passwordVisible}"></i>
+                            <i class="fa-regular"
+                                [ngClass]="{'fa-eye-slash': passwordVisible, 'fa-eye': !passwordVisible}"></i>
                         </button>
                     </div>
                     <span class="error-text"
@@ -115,7 +116,7 @@
                                 class="text-decoration-none">Login</a></span>
                     </div>
                     <div class="register-buitton">
-                        <button class="btn btn-primary p-2"  routerLink="/products">Register</button>
+                        <button class="btn btn-primary p-2">Register</button>
                     </div>
                 </div>
             </form>

@@ -9,19 +9,12 @@
             </div>
             <h5 class="card-title my-2">{{productDetail.category}}</h5>
             <p class="card-text">{{productDetail.description}}</p>
-            <p><span class="fw-semibold">Rating:</span> {{productDetail.rating.rate}},<span
-                    class="fw-semibold">Count:</span> {{productDetail.rating.count}}</p>
+            <p><span class="fw-semibold">Rating:</span> {{productDetail.rate}},<span class="fw-semibold">Count:</span>
+                {{productDetail.count}}</p>
             <div class="float-end">
                 <button class="btn btn-success" (click)="addtocart(productDetail)">Add to Cart</button> &nbsp;
                 <button class="btn btn-secondary" routerLink="/products">Explore More</button>
-
             </div>
-
-
-
         </div>
-
-
-
     </div>
 </div>

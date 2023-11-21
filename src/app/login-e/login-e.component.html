@@ -12,7 +12,7 @@
                             <span class="input-group-text">
                                 <i class="fa-regular fa-envelope"></i>
                             </span>
-                            <input type="email" class="form-control px-2 py-3 "   formControlName="email"
+                            <input type="email" class="form-control px-2 py-3 " formControlName="email"
                                 placeholder="Username or Email">
                         </div>
                         <span class="error-text"
@@ -28,9 +28,9 @@
                             <span class="input-group-text">
                                 <i class="fa-solid fa-lock"></i>
                             </span>
-                            <input type="password" class="form-control px-2 py-3" 
-                                formControlName="password" placeholder="Password">
-                          
+                            <input type="password" class="form-control px-2 py-3" formControlName="password"
+                                placeholder="Password">
+
                         </div>
                         <span class="error-text"
                             *ngIf="LoginForm.get('password')?.hasError('required') && LoginForm.get('password')?.touched">
